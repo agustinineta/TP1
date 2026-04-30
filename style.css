@@ -1,0 +1,190 @@
+/* =============================================
+   ESTILOS GENERALES: Aplican a toda la página
+   ============================================= */
+
+/* Variables de color y tipografía */
+:root {
+  --color-fondo: #0f0f0f;
+  --color-superficie: #1a1a1a;
+  --color-borde: #2e2e2e;
+  --color-acento: #e8ff47;
+  --color-texto: #f0f0f0;
+  --color-texto-suave: #888;
+  --fuente-titulo: 'Syne', sans-serif;
+  --fuente-codigo: 'Space Mono', monospace;
+}
+
+body {
+  font-family: var(--fuente-titulo);
+  line-height: 1.7;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+}
+
+/* =============================================
+   ENCABEZADO: Estilos para la sección <header>
+   ============================================= */
+header {
+  background-color: var(--color-superficie);
+  border-bottom: 2px solid var(--color-acento);
+  padding: 3rem 2rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.header-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.badge {
+  font-family: var(--fuente-codigo);
+  font-size: 0.75rem;
+  background-color: var(--color-acento);
+  color: #0f0f0f;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.1;
+}
+
+.highlight {
+  color: var(--color-acento);
+}
+
+.subtitulo {
+  font-family: var(--fuente-codigo);
+  font-size: 0.9rem;
+  color: var(--color-texto-suave);
+  margin: 0;
+}
+
+/* Decoración geométrica del header */
+.header-deco {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 200px;
+  height: 200px;
+  border: 40px solid var(--color-acento);
+  opacity: 0.08;
+  border-radius: 50%;
+}
+
+/* =============================================
+   SECCIONES: Estilos para <section>
+   ============================================= */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+section {
+  margin: 0 0 1.5rem 0;
+  padding: 1.5rem 2rem;
+  background-color: var(--color-superficie);
+  border-radius: 8px;
+  border: 1px solid var(--color-borde);
+  position: relative;
+  transition: border-color 0.3s;
+}
+
+section:hover {
+  border-color: var(--color-acento);
+}
+
+.section-tag {
+  font-family: var(--fuente-codigo);
+  font-size: 0.7rem;
+  color: var(--color-acento);
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+section h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0 0 0.75rem 0;
+  color: var(--color-texto);
+}
+
+section p {
+  color: #bbb;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* LISTA DE PROYECTOS: Estilos para <ul> */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  padding: 0.5rem 0;
+  color: #bbb;
+  font-size: 0.95rem;
+  border-bottom: 1px solid var(--color-borde);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+ul li:last-child {
+  border-bottom: none;
+}
+
+ul li::before {
+  content: "▸";
+  color: var(--color-acento);
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+/* =============================================
+   PIE DE PÁGINA: Estilos para <footer>
+   ============================================= */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: var(--color-superficie);
+  border-top: 1px solid var(--color-borde);
+  margin-top: 2rem;
+}
+
+footer p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+  color: var(--color-texto-suave);
+}
+
+footer a {
+  color: var(--color-acento);
+  text-decoration: none;
+  font-family: var(--fuente-codigo);
+  font-size: 0.85rem;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-copy {
+  font-family: var(--fuente-codigo);
+  font-size: 0.75rem !important;
+  opacity: 0.5;
+}
